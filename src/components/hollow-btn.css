@@ -1,0 +1,46 @@
+.hollow-btn {
+  border-radius: 10px;
+	border: 2px solid var(--secondary-color);
+  color: var(--secondary-color);
+  background-color: transparent;
+
+  /* Animate hover effect */
+  -webkit-transition: all 0.3 linear;
+  transition: all 0.3 linear;
+  -webkit-transition: color 0.15s ease-in-out,background-color 0.15s ease-in-out,border-color 0.15s ease-in-out,box-shadow 0.15s ease-in-out;
+  transition: color 0.15s ease-in-out,background-color 0.15s ease-in-out,border-color 0.15s ease-in-out,box-shadow 0.15s ease-in-out;
+  transition-property: color, background-color, border-color, box-shadow;
+  transition-duration: 0.15s, 0.15s, 0.15s, 0.15s;
+  transition-timing-function: ease-in-out, ease-in-out, ease-in-out, ease-in-out;
+  transition-delay: 0s, 0s, 0s, 0s;
+}
+
+.hollow-btn:hover {
+  background-color: var(--secondary-color);
+  color: white;
+}
+
+.hollow-btn:active {
+	position:relative;
+	top:1px;
+}
+
+.hollow-btn.white-btn {
+  border-color: #fff;
+  color: #fff;
+}
+
+.hollow-btn.white-btn:hover {
+  background-color: #fff;
+  color: var(--text-color);
+}
+
+.hollow-btn.red-btn {
+  border-color: var(--red);
+  color: var(--red);
+}
+
+.hollow-btn.red-btn:hover {
+  background-color: var(--red);
+  color: #fff;
+}

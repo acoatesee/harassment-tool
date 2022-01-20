@@ -1,0 +1,75 @@
+.multipage-survey-wrapper {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: #11335d;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+.multipage-survey-column h2, .multipage-survey-column h3 {
+  text-align: left;
+  margin-top: 0px;
+}
+
+.btn-row {
+  padding-bottom: 16px;
+}
+
+.multipage-survey-column {
+  /* Display columns side by side */
+  display: inline-block;
+
+  background-color: #eebd31;
+  border-radius: 2em;
+
+  /* Without this, second column aligns to the first column's baseline which is after it applies padding! */
+  vertical-align: top;
+
+  /* Desktop specific styles*/
+  width: 50%;
+  padding: 64px;
+
+  /* Include padding when determining the width */
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+
+.multipage-survey-column .question-text {
+  margin-top: 1rem;
+  font-weight: bold;
+}
+
+/* Spacing in between buttons */
+.multipage-survey-column .btn {
+  width: calc(50% - 8px);
+}
+
+.multipage-survey-column .btn:nth-child(2) {
+  margin-left: 16px;
+}
+
+.multipage-survey-column .progress-bar {
+  margin-bottom: 32px;
+}
+
+@media screen and (max-width: 768px) {
+  .multipage-survey-column.cta .btn {
+    margin-bottom: 16px;
+  }
+
+  .multipage-survey-column h3 {
+    text-align: center;
+    margin-top: 2rem;
+  }
+
+  .multipage-survey-column {
+    width: 100%;
+    padding: 0% 5% 0% 5%;
+  }
+
+  .contact-lawyer-title {
+    margin-top: 24px !important;
+  }
+}

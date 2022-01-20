@@ -1,0 +1,36 @@
+.btn {
+  width: 50%;
+	cursor: pointer;
+	padding: 16px 31px;
+	text-decoration: none;
+  text-align: center;
+  margin-top: 1rem;
+  font-weight: bold;
+  display: inline-block;
+  border-radius: 10px;
+
+  background-color: brown;
+  color: #fff;
+
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.6);
+
+  -webkit-user-select: none; /* Safari */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* IE10+/Edge */
+  user-select: none; /* Standard */
+
+  /* Include padding when determining the width */
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+
+.btn:active {
+	position:relative;
+	top:1px;
+}
+
+.red-btn {
+  background-color: green
+  ;
+}

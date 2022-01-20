@@ -1,0 +1,112 @@
+.vaccine-section.multipage-survey-wrapper {
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  overflow: hidden;
+  background-color: #11335D;
+}
+
+.vaccine-section .multipage-survey-column h2, .multipage-survey-column h3 {
+  text-align: left;
+  margin-top: 0px;
+}
+
+.vaccine-section .btn-row {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 16px;
+}
+
+.vaccine-section .multipage-survey-column {
+  /* Display columns side by side */
+  display: inline-block;
+
+  /* Without this, second column aligns to the first column's baseline which is after it applies padding! */
+  vertical-align: top;
+
+  /* Desktop specific styles*/
+  width: 50%;
+  padding: 64px;
+
+  /* Include padding when determining the width */
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+.vaccine-section .multipage-survey-column .inner-content {
+  background-color: #EEBD31;
+  padding: 40px 30px;
+  border-radius: 60px;
+}
+.vaccine-section .multipage-survey-column .question-text {
+  margin-top: 1rem;
+  font-weight: normal;
+}
+
+/* Spacing in between buttons */
+.vaccine-section .multipage-survey-column .btn {
+  width: calc(50% - 8px);
+  font-size: 20px;
+  border-radius: 30px;
+}
+
+
+.vaccine-section .multipage-survey-column .progress-bar {
+  margin-bottom: 32px;
+  background: white;
+}
+
+.vaccine-section .status-image-container {
+  text-align: center;
+}
+
+.vaccine-section .status-image-container img.status-image {
+  width: 120px;
+}
+
+.inner-content-container input[type="checkbox"] {
+  display: inline-block;
+}
+
+.vaccine-section .inner-content-container p {
+  display: inline-block;
+  width: 90%;
+  vertical-align: top;
+}
+
+.vaccine-section p,
+.vaccine-section li {
+  color: black;
+}
+.btn.gray-btn {
+  background-color: gray;
+}
+.d-none {
+  display: none;
+}
+
+/* White CTA form text */
+.cta-vaccine-column .contact-lawyer-title, .cta-vaccine-column p {
+  color: white;
+}
+
+@media screen and (max-width: 1024px) {
+  .vaccine-section .multipage-survey-column.cta .btn {
+    margin-bottom: 16px;
+  }
+
+  .vaccine-section .multipage-survey-column h3 {
+    text-align: center;
+    margin-top: 2rem;
+  }
+
+  .vaccine-section .multipage-survey-column {
+    width: 100%;
+    padding: 5% 5% 0% 5%;
+  }
+
+  .vaccine-section .contact-lawyer-title {
+    margin-top: 24px !important;
+  }
+}

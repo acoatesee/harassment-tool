@@ -1,0 +1,7 @@
+@media screen and (max-width: 768px) {
+  .progress-question-number, .progress-bar {
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+  }
+}

@@ -1,0 +1,22 @@
+.container {
+  position: relative;
+  text-align: center;
+  color: white;
+}
+
+.container img {
+  display: block;
+}
+
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.translucent-background-for-text {
+  background-color: rgba(0, 0, 0, 0.75);
+  border-radius: 25px;
+  padding: 32px;
+}

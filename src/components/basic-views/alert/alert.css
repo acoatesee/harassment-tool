@@ -1,0 +1,27 @@
+.alert {
+  /* Set the shape of the warning */
+  position: relative;
+  padding: 12px 20px;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  border: 1px solid transparent;
+  border-radius: 8px;
+}
+
+.alert .alert-icon {
+  vertical-align: middle;
+  margin-right: 8px;
+}
+
+/* Colour the alert itself */
+.alert.alert-red {
+  color: #721c24;
+  background-color: #f8d7da;
+  border-color: #f5c6cb;
+}
+
+.alert.alert-green {
+  color: #135331;
+  background-color: #acecca;
+  border-color: #45d388;
+}
