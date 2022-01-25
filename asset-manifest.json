@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/harassment-tool/static/css/main.68b155cf.css",
-    "main.js": "/harassment-tool/static/js/main.41f639df.js",
+    "main.js": "/harassment-tool/static/js/main.d04f3c94.js",
     "static/js/787.8d0e0bbd.chunk.js": "/harassment-tool/static/js/787.8d0e0bbd.chunk.js",
     "static/media/logo.svg": "/harassment-tool/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
     "static/media/multipage-survey-bg.svg": "/harassment-tool/static/media/multipage-survey-bg.f8a1a5b0d41bda11cedaa82d4756ea64.svg",
@@ -9,11 +9,11 @@
     "static/media/alert-octagon.svg": "/harassment-tool/static/media/alert-octagon.3f421d95d21e53b10880e05fe1db8e8f.svg",
     "static/media/checkmark.svg": "/harassment-tool/static/media/checkmark.9e55125501e60e561bb70fc4fb767280.svg",
     "main.68b155cf.css.map": "/harassment-tool/static/css/main.68b155cf.css.map",
-    "main.41f639df.js.map": "/harassment-tool/static/js/main.41f639df.js.map",
+    "main.d04f3c94.js.map": "/harassment-tool/static/js/main.d04f3c94.js.map",
     "787.8d0e0bbd.chunk.js.map": "/harassment-tool/static/js/787.8d0e0bbd.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.68b155cf.css",
-    "static/js/main.41f639df.js"
+    "static/js/main.d04f3c94.js"
   ]
 }
