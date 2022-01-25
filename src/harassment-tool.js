@@ -8,7 +8,7 @@ class HarassmentTool extends React.Component {
   constructor(props) {
     super(props);
     this.toolTitle = "Harassment Investigation Tool";
-    this.firstQuestion = "age";
+    this.firstQuestion = "numComplainants";
   }
 
   render() {
@@ -40,29 +40,29 @@ class HarassmentTool extends React.Component {
   // }
 
   getOutputToDisplay(outputName) {
-    if (outputName === "outputMultipleComplainants") {
-      return "RED FLAG: When there are multiple complainants or respondents, the more complex the issue and the more likely an external investigator is needed"
-    } else if (outputName === "outputMultipleComplainants") {
-      return "RED FLAG: When there are multiple complainants or respondents, the more complex the issue and the more likely an external investigator is needed"
-    } else if (outputName === "outputMultipleComplaints") {
-      return "RED FLAG: When there are multiple complaints, the more complex the issue and the more likely an external investigator is needed"
-    } else if (outputName === "outputInvestigationConfidentiality") {
-      return "RED FLAG: The investigation process must maintain confidentiality and only necessary information should be disclosed (OHSA 32.0.6 (2)(d)). If complainants are able to compare notes before making the complaint to management, are allowed to hear their complaints in front of one another, and are not cautioned not to speak to each other about their respective complaints"
-    } else if (outputName === "outputOutsideDismissed") {
-      return "RED FLAG: the employer may have failed to investigate the complaint properly since the incident was dismissed without reason"
-    } else if (outputName === "outputInvestigationProcess") {
-      return "RED FLAG: According to the OHSA, an employer should have detailed measures and procedures for reporting incidents of workplace harassment and also explanations for how these incidents and complaints will be investigated (OHSA 32.0.6 (2)(a)(c)). If the employer has no policy, the investigation may be flawed if an internal investigator (i.e. someone from the organization) lacks the experience, knowledge, and training needed to conduct proper investigations (Schneider)."
-    } else if (outputName === "outputUnionRepresentation") {
-      return "RED FLAG Union Representation: Union members have a right to support by a union representative during the investigation process. If you were not offered that, or if someone prevented you from having it, there might be an issue with the investigation."
-    } else if (outputName === "outputUnionRepresentationBlockedEmp") {
-      return "RED FLAG Union Representation: Union members have a right to support by a union representative during the investigation process. If you were not offered that, or if someone prevented you from having it, there might be an issue with the investigation."
-    } else if (outputName === "outputUnionRepresentationBlockedInv") {
-      return "RED FLAG Union Representation: Union members have a right to support by a union representative during the investigation process. If you were not offered that, or if someone prevented you from having it, there might be an issue with the investigation."
-    } else if (outputName === "outputUnionSameRepConsent") {
-      return "RED FLAG Conflicting Representation: There may be a potential conflict if the same union member represents the complainant and respondent. If both parties consented to this, it may be less of an issue."
-    } else if (outputName === "outputUnionLocation") {
-      return "RED FLAG EMPLOYER INTERFERENCE - If the harassment (or other issues) took place only during union business, then the employer might not have a right to investigate as this could constitute interference with union business."
-    }
+    // if (outputName === "outputMultipleComplainants") {
+    //   return "RED FLAG: When there are multiple complainants or respondents, the more complex the issue and the more likely an external investigator is needed"
+    // } else if (outputName === "outputMultipleRespondents") {
+    //   return "RED FLAG: When there are multiple complainants or respondents, the more complex the issue and the more likely an external investigator is needed"
+    // } else if (outputName === "outputMultipleComplaints") {
+    //   return "RED FLAG: When there are multiple complaints, the more complex the issue and the more likely an external investigator is needed"
+    // } else if (outputName === "outputInvestigationConfidentiality") {
+    //   return "RED FLAG: The investigation process must maintain confidentiality and only necessary information should be disclosed (OHSA 32.0.6 (2)(d)). If complainants are able to compare notes before making the complaint to management, are allowed to hear their complaints in front of one another, and are not cautioned not to speak to each other about their respective complaints"
+    // } else if (outputName === "outputOutsideDismissed") {
+    //   return "RED FLAG: the employer may have failed to investigate the complaint properly since the incident was dismissed without reason"
+    // } else if (outputName === "outputInvestigationProcess") {
+    //   return "RED FLAG: According to the OHSA, an employer should have detailed measures and procedures for reporting incidents of workplace harassment and also explanations for how these incidents and complaints will be investigated (OHSA 32.0.6 (2)(a)(c)). If the employer has no policy, the investigation may be flawed if an internal investigator (i.e. someone from the organization) lacks the experience, knowledge, and training needed to conduct proper investigations (Schneider)."
+    // } else if (outputName === "outputUnionRepresentation") {
+    //   return "RED FLAG Union Representation: Union members have a right to support by a union representative during the investigation process. If you were not offered that, or if someone prevented you from having it, there might be an issue with the investigation."
+    // } else if (outputName === "outputUnionRepresentationBlockedEmp") {
+    //   return "RED FLAG Union Representation: Union members have a right to support by a union representative during the investigation process. If you were not offered that, or if someone prevented you from having it, there might be an issue with the investigation."
+    // } else if (outputName === "outputUnionRepresentationBlockedInv") {
+    //   return "RED FLAG Union Representation: Union members have a right to support by a union representative during the investigation process. If you were not offered that, or if someone prevented you from having it, there might be an issue with the investigation."
+    // } else if (outputName === "outputUnionSameRepConsent") {
+    //   return "RED FLAG Conflicting Representation: There may be a potential conflict if the same union member represents the complainant and respondent. If both parties consented to this, it may be less of an issue."
+    // } else if (outputName === "outputUnionLocation") {
+    //   return "RED FLAG EMPLOYER INTERFERENCE - If the harassment (or other issues) took place only during union business, then the employer might not have a right to investigate as this could constitute interference with union business."
+    // }
     console.error(`Current question name ${outputName} is not included in the expected output names.`);
     return null;
   }

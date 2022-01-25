@@ -26,9 +26,14 @@ const HarassmentContent = {
                 "Transgender",
                 "Non-binary/non-conforming",
                 "Prefer not to respond",
-                "Prefer to self-describe below [Fill in option]",
+                "Prefer to self-describe [fill-in on next page]",
             ],
         questionType: "mc"
+    },
+    genderOther: {
+        id: 2,
+        question: "Enter your self-described gender:",
+        questionType: "text"
     },
     race: {
         id: 3,
@@ -288,8 +293,8 @@ const HarassmentContent = {
                 "A human resource professional not related to your workplace/ organization ",
                 "A lawyer not related to your workplace/ organization",
                 "A licensed private investigator not related to your workplace/ organization",
-                "Other person related to your workplace/ organization [fill-in]",
-                "Other person not related to your workplace/ organization [fill-in]",
+                "Other person related to your workplace/ organization [fill-in on next page]",
+                "Other person not related to your workplace/ organization [fill-in on next page]",
             ],
         questionType: "mc",
     },
@@ -308,18 +313,67 @@ const HarassmentContent = {
     },
     demoEnd: {
         question: " this is the end"
-    }
+    },
+
+    outputMultipleComplainants: {
+        question: "RED FLAG",
+        questionType: "info",
+        explanation: "When there are multiple complainants or respondents, the more complex the issue and the more likely an external investigator is needed"},
+    outputMultipleRespondents: {
+        question: "RED FLAG",
+        questionType: "info",
+        explanation: "When there are multiple complainants or respondents, the more complex the issue and the more likely an external investigator is needed"},
+    outputMultipleComplaints: {
+        question: "RED FLAG",
+        questionType: "info",
+        explanation: "When there are multiple complaints, the more complex the issue and the more likely an external investigator is needed"},
+    outputInvestigationConfidentiality: {
+        question: "RED FLAG",
+        questionType: "info",
+        explanation: "The investigation process must maintain confidentiality and only necessary information should be disclosed (OHSA 32.0.6 (2)(d)). If complainants are able to compare notes before making the complaint to management, are allowed to hear their complaints in front of one another, and are not cautioned not to speak to each other about their respective complaints"},
+    outputOutsideDismissed: {
+        question: "RED FLAG",
+        questionType: "info",
+        explanation: "the employer may have failed to investigate the complaint properly since the incident was dismissed without reason"},
+    outputInvestigationProcess: {
+        question: "RED FLAG",
+        questionType: "info",
+        explanation: "According to the OHSA, an employer should have detailed measures and procedures for reporting incidents of workplace harassment and also explanations for how these incidents and complaints will be investigated (OHSA 32.0.6 (2)(a)(c)). If the employer has no policy, the investigation may be flawed if an internal investigator (i.e. someone from the organization) lacks the experience, knowledge, and training needed to conduct proper investigations (Schneider)."},
+    outputUnionRepresentation: {
+        question: "RED FLAG",
+        questionType: "info",
+        explanation: "Union Representation: Union members have a right to support by a union representative during the investigation process. If you were not offered that, or if someone prevented you from having it, there might be an issue with the investigation."},
+    outputUnionRepresentationBlockedEmp: {
+        question: "RED FLAG",
+        questionType: "info",
+        explanation: "Union Representation: Union members have a right to support by a union representative during the investigation process. If you were not offered that, or if someone prevented you from having it, there might be an issue with the investigation."},
+    outputUnionRepresentationBlockedInv: {
+        question: "RED FLAG",
+        questionType: "info",
+        explanation: "Union Representation: Union members have a right to support by a union representative during the investigation process. If you were not offered that, or if someone prevented you from having it, there might be an issue with the investigation."},
+    outputUnionSameRepConsent: {
+        question: "RED FLAG",
+        questionType: "info",
+        explanation: "Conflicting Representation: There may be a potential conflict if the same union member represents the complainant and respondent. If both parties consented to this, it may be less of an issue."},
+    outputUnionLocation: {
+        question: "RED FLAG",
+        questionType: "info",
+        explanation: "EMPLOYER INTERFERENCE - If the harassment (or other issues) took place only during union business, then the employer might not have a right to investigate as this could constitute interference with union business."},
+
 }
 
 const HarassmentNext = {
     age: { default: "gender" },
-    gender: { default: "race" },
+    gender: { 5:"genderOther", default: "race" },
+    genderOther: { default: "race" },
     race: { default: "industry" },
     industry: { default: "position" },
     position: { default: "nature" },
     nature: { default: "numComplainants" },
     numComplainants: { 1: "outputMultipleComplainants", 2: "outputMultipleComplainants", default: "numRespondents" },
-    numRespondents: { 1: "outputMultipleComplainants", 2: "outputMultipleComplainants", default: "numAllegations" },
+    outputMultipleComplainants: {default: "numRespondents"},
+    numRespondents: { 1: "outputMultipleRespondents", 2: "outputMultipleRespondents", default: "numAllegations" },
+    outputMultipleRespondents: { default: "numAllegations" },
     numAllegations: { 1: "outputMultipleComplaints", 2: "outputMultipleComplaints", default: "discussion" },
     discussion: { 0: "outputInvestigationConfidentiality", default: "inWorkplace" },
     inWorkplace: { 1: "outsideDismissed", default: "investigationProcess" },

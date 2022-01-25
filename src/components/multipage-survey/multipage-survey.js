@@ -4,6 +4,7 @@ import StartingInfo from './starting-info.js';
 import MultipleChoiceQuestion from '../basic-views/multiple-choice/multiple-choice-question';
 import CheckboxesQuestion from '../basic-views/checkboxes/checkboxes-question.js';
 import TextQuestion from '../basic-views/text-questions/text-question.js';
+import InfoQuestion from '../basic-views/info-questions/info-question.js';
 import {isEmptyText, isNumeric} from '../../utils/validation.js';
 import calculateMaxRemainingQuestionsForAll from '../../utils/calculate-remaining-questions-for-all.js';
 import Alert from '../basic-views/alert/alert.js';
@@ -165,6 +166,18 @@ class MultipageSurvey extends React.Component {
                 initialAnswers={initialAnswers}
                 invalid={this.state.alertMessage !== ""}
                 onAnswerSelected={this.onCheckboxesAnswerSelected} />;
+      } else if (this.state.currentQuestion.questionType === 'info') {
+        return <InfoQuestion
+                question={this.state.currentQuestion.question}
+                explanation={this.state.currentQuestion.explanation}
+                icon={this.state.currentQuestion.icon}
+                type={this.state.currentQuestion.questionType}
+                // key={`${this.state.currentQuestionName}extQuestionKey`}
+                // name={`${this.state.currentQuestionName}TextQuestion`}
+                // onChange={this.onTextChange}
+                // invalid={this.state.alertMessage !== ""}
+                // initialValue={this.state.textAnswers[this.state.currentQuestion.question]}
+                dollarSign={this.state.currentQuestion.dollarSign} />;
       } else if (this.state.currentQuestion.questionType !== undefined) {
         return <TextQuestion
                 question={this.state.currentQuestion.question}
@@ -181,7 +194,7 @@ class MultipageSurvey extends React.Component {
         // Displays info on the starting page
         return <p className="question-text">{this.state.currentQuestion.question}</p>;
       }
-    } else if (this.state.currentQuestionName.startsWith("info")) {
+    } else if (this.state.currentQuestionName.startsWith("output")) {
       // Display info message, will continue on to other question when user presses Next
       return this.getInfoToDisplay(this.state.currentQuestionName);
     } else {
@@ -244,8 +257,10 @@ class MultipageSurvey extends React.Component {
   }
 
   validate(questionAnswer, questionType) {
-    if (questionAnswer === undefined && questionType !== "checkboxes") {
-      return "Please answer the question to the best of your ability.";
+    if (questionAnswer === undefined && questionType !== "checkboxes" ) {
+      if (questionAnswer === undefined && questionType !== "info"){
+        return "Please answer the question to the best of your ability.";
+      }
     } else if (questionType === "text" || questionType === "numeric") {
       if (isEmptyText(questionAnswer)) {
         return "The text field cannot be empty.";
