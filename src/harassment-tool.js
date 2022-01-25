@@ -7,26 +7,26 @@ class HarassmentTool extends React.Component {
 
   constructor(props) {
     super(props);
-    this.toolTitle = "Prospectus Exemption Tool";
+    this.toolTitle = "Harassment Investigation Tool";
     this.firstQuestion = "age";
   }
 
   render() {
     return <MultipageSurvey title={this.toolTitle}
-                            getOutputToDisplay={this.getOutputToDisplay}
-                            modelOutputName="outputNotApplicable"
-                            modelInference={this.inference}
-                            gtmFormName={this.toolTitle}
-                            questions={HarassmentContent}
-                            nextQuestionDict={HarassmentNext}
-                            firstQuestion={this.firstQuestion}
-                            canFinishEarly={false}
-                            toolIntroduction={"Under Ontario Securities Law, issuers (corporations) who offer securities to the public must file a prospectus with their local securities commission to raise money, but there are some exemptions to the prospectus requirement. This tool is meant to help business owners determine whether a particular investor is eligible to invest in a company under a prospectus exemption. It is your responsibility as a business owner to ensure that your investors meet any and all requirements outlined in National Instrument NI 45-106 Prospectus Exemptions."}
-                            // shouldDisplayCTA={this.shouldDisplayCTA}
-                            // createToolDetailsForContactLawyer={this.createToolDetailsForContactLawyer}
-                            // preprocessRelatedCasesForContactLawyer={this.preprocessRelatedCasesForContactLawyer}
-                            // createSuggestedDemandLetter={this.createSuggestedDemandLetter}
-                            skipFirst={this.props.skipFirst} />;
+        getOutputToDisplay={this.getOutputToDisplay}
+        modelOutputName="outputNotApplicable"
+        modelInference={this.inference}
+        gtmFormName={this.toolTitle}
+        questions={HarassmentContent}
+        nextQuestionDict={HarassmentNext}
+        firstQuestion={this.firstQuestion}
+        canFinishEarly={false}
+        toolIntroduction={"This tool is designed to address the growing climate of workplace harassment and the investigations conducted in relation to them. According to the Occupational Health and Safety Act, an employer shall ensure that an investigation is conducted that is appropriate in the circumstances. This is important to both employers and employees since failure to conduct a fair and neutral investigation process could lead to damages, another investigation being ordered, or setting aside the employer’s sanctions. This questionnaire will show you whether your investigation has potential flaws and will flag any flaws at the end."}
+        // shouldDisplayCTA={this.shouldDisplayCTA}
+        // createToolDetailsForContactLawyer={this.createToolDetailsForContactLawyer}
+        // preprocessRelatedCasesForContactLawyer={this.preprocessRelatedCasesForContactLawyer}
+        // createSuggestedDemandLetter={this.createSuggestedDemandLetter}
+        skipFirst={this.props.skipFirst} />;
   }
 
   // shouldDisplayCTA() {
