@@ -8,7 +8,8 @@ class HarassmentTool extends React.Component {
   constructor(props) {
     super(props);
     this.toolTitle = "Harassment Investigation Tool";
-    this.firstQuestion = "numComplainants";
+    this.firstQuestion = "age";
+    // this.firstQuestion = "numComplainants"; // fast version
   }
 
   render() {
